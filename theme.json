@@ -1,0 +1,55 @@
+{
+    "name": "Adwaita",
+    "author": "PrincParshia",
+    "description": "Native Adwaita appearance for Steam",
+    "version": "1.0.0",
+
+    "manifest_version": 8,
+    "target": "Desktop",
+    "tabs": {
+        "all": ["Steam|SteamLibraryWindow", "desktopchat", "desktopcontextmenu", "desktopoverlay"]
+    },
+
+    "inject": {
+        "millennium/conf.css": ["all"]
+    },
+
+    "patches": {
+        "Font": {
+            "type":  "dropdown",
+            "values": {
+                "Adwaita": { "src/fonts/adwaita/conf.css": ["all"] },
+                "Noto Sans": { "src/fonts/noto-sans/conf.css": ["all"] }
+            }
+        },
+        "Window Controls Layout": {
+            "type":  "dropdown",
+            "values": {
+                "Adwaita": { "millennium/window-control-layouts/default.css": ["all"] },
+                "No Button": { "millennium/window-control-layouts/none.css": ["all"] },
+                "Only Close Button": { "millennium/window-control-layouts/close.css": ["all"] }
+            }
+        },
+        "Login QR Code": {
+            "type": "dropdown",
+            "values": {
+                "Show": {},
+                "Show On Hover": {
+                    "src/extras/login/hover-qr.css": ["all"]
+                },
+                "Hide": {
+                    "src/extras/login/hide-qr.css": ["all"]
+                }
+            }
+        },
+        "Show URL": {
+            "type": "checkbox",
+            "values": {
+                "No": {},
+                "Yes": {
+                    "src/extras/store/show-url.css": ["all"]
+                }
+            }
+        }
+    }
+}

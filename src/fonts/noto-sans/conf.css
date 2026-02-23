@@ -1,0 +1,32 @@
+@font-face
+{
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: 100 900;
+	src: url("NotoSans-Regular.otf") format("truetype");
+	font-display: swap;
+}
+
+@font-face
+{
+	font-family: "Noto Sans Mono";
+	font-style: normal;
+	font-weight: 400;
+	src: url("NotoSansMono-Regular.ttf") format("truetype");
+	font-display: swap;
+}
+
+@font-face
+{
+	font-family: "Noto Sans Mono";
+	font-style: normal;
+	font-weight: 700;
+	src: url("NotoSansMono-Bold.ttf") format("truetype");
+	font-display: swap;
+}
+
+:root
+{
+	--adw-text-font-primary: "Noto Sans" !important;
+	--adw-text-font-monospace-primary: "Noto Sans" !important;
+}

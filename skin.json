@@ -1,0 +1,60 @@
+{
+	"name": "Adwaita",
+	"author": "PrincParshia",
+	"description": "Native Adwaita appearance for Steam",
+	"version": "1.0.0",
+
+	"github": {
+		"owner": "PrincParshia",
+		"repo_name": "Adwaita-Steam"
+	},
+
+	"tags": ["Adwaita", "GTK"],
+
+	"UseDefaultPatches": false,
+	"Patches": [
+		{
+			"MatchRegexString": ".*",
+			"TargetCss": "millennium/conf.css"
+		}
+	],
+
+	"RootColors": "src/css/_root/colors.css",
+
+	"Conditions": {
+		"Font": {
+			"description": "Font family",
+			"default": "Adwaita",
+			"values": {
+				"Adwaita": { "TargetCss": { "affects": [".*"], "src": "src/fonts/adwaita/conf.css" } },
+				"Noto Sans": { "TargetCss": { "affects": [".*"], "src": "src/fonts/noto-sans/conf.css" } }
+			}
+		},
+		"Window Controls Layout": {
+			"description": "Window control buttons layout",
+			"default": "Adwaita",
+			"values": {
+				"Adwaita": { "TargetCss": { "affects": [".*"], "src": "millennium/window-control-layouts/default.css" } },
+				"No Button": { "TargetCss": { "affects": [".*"], "src": "millennium/window-control-layouts/none.css" } },
+				"Only Close Button": { "TargetCss": { "affects": [".*"], "src": "millennium/window-control-layouts/close.css" } }
+			}
+		},
+		"Login QR Code": {
+			"description": "Changes visibility of QR code in the Login window",
+			"default": "Show",
+			"values": {
+				"Show": {},
+				"Show On Hover": { "TargetCss": { "affects": [".*"], "src": "src/extras/login/hover-qr.css" } },
+				"Hide": { "TargetCss": { "affects": [".*"], "src": "src/extras/login/hide-qr.css" } }
+			}
+		},
+		"Show URL": {
+			"description": "Shows URL on Store and Community pages in the main window",
+			"default": "no",
+			"values": {
+				"no": {},
+				"yes": { "TargetCss": { "affects": [".*"], "src": "src/extras/store/show-url.css" } }
+			}
+		}
+	}
+}
